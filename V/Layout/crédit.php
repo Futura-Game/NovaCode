@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url(../Space.jpg);
+      background: url(../../image/Space.jpg);
       background-size: cover;
       background-repeat: no-repeat;
     }
@@ -96,7 +96,7 @@
     }
 
     div.titre {
-        background: url(../Maquette-pour-Solde.png);
+        background: url(../../image/Maquette-pour-Solde.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -154,7 +154,7 @@
     <div class="header">
 
       <div class="logo">
-        <img src="../Nova.png" alt="Nova">
+        <img src="../../image/Nova.png" alt="Nova">
         <span>Nova Code</span>
       </div>
 
@@ -165,10 +165,10 @@
 
       <nav>
         <ul>
-          <li><a href="./index.html">Accueil</a></li>
-          <li><a class="active" href="./catalogue.html">Catalogue</a></li>
-          <li><a href="./crédit.html">Crédit</a></li>
-          <li><a href="./carte.html">Carte</a></li>
+          <li><a href="./index.php">Accueil</a></li>
+          <li><a href="./catalogue.php">Catalogue</a></li>
+          <li><a class="active" href="./crédit.php">Crédit</a></li>
+          <li><a href="./carte.php">Carte</a></li>
         </ul>
       </nav>
 
@@ -177,74 +177,72 @@
 
   <main>
     <div class="titre">
-        <h1>Nos jeux disponible  :</h1>
+        <h1>Nos cartes virtuels disponible :</h1>
     </div>
     <div class="select-categorie">
         <div class="Choix-1" id="divCatégorie1">
-          <p>130.00€</p>
-          <img src="../game/Gta6.jpg" alt="Nova" width="100px">
+          <p>10.00€</p>
+          <img src="../../image/CarteRobux10.jpg" alt="Nova" width="100px">
           <div class="bouton">
             <button>Obtenir</button>
             <button>Plus d'info</button>         
           </div>
         </div>
         <div class="Choix-2" id="divCatégorie2">
-          <p>30.00€</p>
-          <img src="../game/portal.jpg" alt="Nova" width="100px">
+          <p>25.00€</p>
+          <img src="../../image/CarteRobux25.jpg" alt="Nova" width="100px">
           <div class="bouton">
             <button>Obtenir</button>
             <button>Plus d'info</button>         
           </div>
         </div> 
         <div class="Choix-3" id="divCatégorie3">
-          <p>GRATUIT</p>
-          <img src="../game/Apex.jpg" alt="Nova" width="100px">
+          <p>50.00€</p>
+          <img src="../../image/CarteRobux50.jpg" alt="Nova" width="100px">
           <div class="bouton">
             <button>Obtenir</button>
             <button>Plus d'info</button>         
           </div>
         </div>
         <div class="Choix-4" id="divCatégorie4">
-          <p>GRATUIT</p>
-          <img src="../game/Overwatch2.png" alt="Nova" width="100px">
+          <p>100.00€</p>
+          <img src="../../image/CarteRobux100.jpg" alt="Nova" width="100px">
           <div class="bouton">
             <button>Obtenir</button>
             <button>Plus d'info</button>         
           </div>
         </div>
         <div class="Choix-5" id="divCatégorie5">
-          <p>30.00€</p>
-          <img src="../game/PvZ Garden War.avif" alt="Nova" width="100px">
+          <p>10.00€</p>
+          <img src="../../image/CarteVBuck10.jpg" alt="Nova" width="100px">
           <div class="bouton">
             <button>Obtenir</button>
             <button>Plus d'info</button>         
           </div>
         </div>
         <div class="Choix-6" id="divCatégorie6">
-          <p>30.00€</p>
-          <img src="../game/The-Last-of-Us-Part-1.jpg" alt="Nova" width="100px">
+          <p>20.00€</p>
+          <img src="../../image/CarteVBuck20.jpg" alt="Nova" width="100px">
           <div class="bouton">
             <button>Obtenir</button>
             <button>Plus d'info</button>         
           </div>
         </div>
         <div class="Choix-7" id="divCatégorie7">
-          <p>30.00€</p>
-          <img src="../game/Tombe Raider Shadow.jpg" alt="Nova" width="100px">
+          <p>35.00€</p>
+          <img src="../../image/CarteVBuck35.jpg" alt="Nova" width="100px">
           <div class="bouton">
             <button>Obtenir</button>
             <button>Plus d'info</button>         
           </div>
         </div>
         <div class="Choix-8" id="divCatégorie8">
-          <p>30.00€</p>
-          <img src="../game/Red dead.jpg" alt="Nova" width="100px">
+          <p>80.00€</p>
+          <img src="../../image/CarteVBuck80.jpg" alt="Nova" width="100px">
           <div class="bouton">
             <button>Obtenir</button>
             <button>Plus d'info</button>         
           </div>
         </div>
     </div>
-  </main>
-</body>
-</html>
+  </main../../image/

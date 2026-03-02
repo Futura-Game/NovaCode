@@ -9,7 +9,7 @@
     body {
         margin: 0;
         font-family: Arial, sans-serif;
-        background: url(../Space.jpg);
+        background: url(../../image/Space.jpg);
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -107,7 +107,7 @@
         object-fit: cover;
     }
     div.titre {
-        background: url(../Maquette-pour-Solde.png);
+        background: url(../../image/Maquette-pour-Solde.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -144,7 +144,7 @@
     <div class="header">
 
       <div class="logo">
-        <img src="../Nova.png" alt="Nova">
+        <img src="../../image/Nova.png" alt="Nova">
         <span>Nova Code</span>
       </div>
 
@@ -155,10 +155,10 @@
 
       <nav>
         <ul>
-          <li><a class="active" href="./index.html">Accueil</a></li>
-          <li><a href="./catalogue.html">Catalogue</a></li>
-          <li><a href="./crédit.html">Crédit</a></li>
-          <li><a href="./carte.html">Carte</a></li>
+          <li><a class="active" href="./index.php">Accueil</a></li>
+          <li><a href="./catalogue.php">Catalogue</a></li>
+          <li><a href="./crédit.php">Crédit</a></li>
+          <li><a href="./carte.php">Carte</a></li>
         </ul>
       </nav>
 
@@ -181,7 +181,7 @@
                 <p><s>40.00€</s> -> 32.00€</p>
             </div>
         </div>
-        <img src="../game/Satis.jpg">
+        <img src="../../image/Satis.jpg">
     </div>
     <div class="groupe">
         <div class="text+bouton">
@@ -195,7 +195,7 @@
                 <p><s>10.00€</s> -> 8.00€</p>
             </div>
         </div>
-        <img src="../game/Satis.jpg">
+        <img src="../../image/Satis.jpg">
     </div>
     <div class="groupe">
         <div class="text+bouton">
@@ -209,7 +209,7 @@
                 <p><s>40.00€</s> -> 26.00€</p>
             </div>
         </div>
-        <img src="../game/minecraft.jpg">
+        <img src="../../image/minecraft.jpg">
     </div>
   </main>
 </body>

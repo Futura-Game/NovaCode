@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url(../Space.jpg);
+      background: url(../../image/Space.jpg);
       background-size: cover;
       background-repeat: no-repeat;
     }
@@ -142,7 +142,7 @@
     <div class="header">
 
       <div class="logo">
-        <img src="../Nova.png" alt="Nova">
+        <img src="../../image/Nova.png" alt="Nova">
         <span>Nova Code</span>
       </div>
 
@@ -153,10 +153,10 @@
 
       <nav>
         <ul>
-          <li><a href="./index.html">Accueil</a></li>
-          <li><a href="./catalogue.html">Catalogue</a></li>
-          <li><a href="./crédit.html">Crédit</a></li>
-          <li><a class="active" href="./carte.html">Carte</a></li>
+          <li><a href="./index.php">Accueil</a></li>
+          <li><a href="./catalogue.php">Catalogue</a></li>
+          <li><a href="./crédit.php">Crédit</a></li>
+          <li><a class="active" href="./carte.php">Carte</a></li>
         </ul>
       </nav>
 
