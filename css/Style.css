@@ -1,0 +1,36 @@
+body {
+    background-color: gray;
+}
+table {
+    width: 100%;
+}
+th {
+    background-color: gold;
+    color: black;
+    border: 1px solid black;
+}
+td {
+    background-color: cyan;
+    color: black;
+    border: 1px solid black;
+}
+a:visited {
+    color: red
+}
+a:hover {
+    color: white
+}
+a.Bouton {
+    text-decoration: none;
+}
+div {
+    background-color: cyan;
+}
+ul {
+    color: gold;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style-type: none;
+    font-size: 25px;
+}

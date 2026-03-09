@@ -184,7 +184,7 @@
           <p>10.00€</p>
           <img src="../../image/CarteRobux10.jpg" alt="Nova" width="100px">
           <div class="bouton">
-            <button>Obtenir</button>
+            <button>Ajouter au panier</button>
             <button>Plus d'info</button>         
           </div>
         </div>
@@ -192,7 +192,7 @@
           <p>25.00€</p>
           <img src="../../image/CarteRobux25.jpg" alt="Nova" width="100px">
           <div class="bouton">
-            <button>Obtenir</button>
+            <button>Ajouter au panier</button>
             <button>Plus d'info</button>         
           </div>
         </div> 
@@ -200,7 +200,7 @@
           <p>50.00€</p>
           <img src="../../image/CarteRobux50.jpg" alt="Nova" width="100px">
           <div class="bouton">
-            <button>Obtenir</button>
+            <button>Ajouter au panier</button>
             <button>Plus d'info</button>         
           </div>
         </div>
@@ -208,7 +208,7 @@
           <p>100.00€</p>
           <img src="../../image/CarteRobux100.jpg" alt="Nova" width="100px">
           <div class="bouton">
-            <button>Obtenir</button>
+            <button>Ajouter au panier</button>
             <button>Plus d'info</button>         
           </div>
         </div>
@@ -216,7 +216,7 @@
           <p>10.00€</p>
           <img src="../../image/CarteVBuck10.jpg" alt="Nova" width="100px">
           <div class="bouton">
-            <button>Obtenir</button>
+            <button>Ajouter au panier</button>
             <button>Plus d'info</button>         
           </div>
         </div>
@@ -224,7 +224,7 @@
           <p>20.00€</p>
           <img src="../../image/CarteVBuck20.jpg" alt="Nova" width="100px">
           <div class="bouton">
-            <button>Obtenir</button>
+            <button>Ajouter au panier</button>
             <button>Plus d'info</button>         
           </div>
         </div>
@@ -232,7 +232,7 @@
           <p>35.00€</p>
           <img src="../../image/CarteVBuck35.jpg" alt="Nova" width="100px">
           <div class="bouton">
-            <button>Obtenir</button>
+            <button>Ajouter au panier</button>
             <button>Plus d'info</button>         
           </div>
         </div>
@@ -240,7 +240,7 @@
           <p>80.00€</p>
           <img src="../../image/CarteVBuck80.jpg" alt="Nova" width="100px">
           <div class="bouton">
-            <button>Obtenir</button>
+            <button>Ajouter au panier</button>
             <button>Plus d'info</button>         
           </div>
         </div>

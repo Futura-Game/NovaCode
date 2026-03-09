@@ -184,7 +184,7 @@
           <p>130.00€</p>
           <img src="../../image/Gta6.jpg" alt="Nova" width="100px">
           <div class="bouton">
-            <button>Obtenir</button>
+            <button>Ajouter au panier</button>
             <button>Plus d'info</button>         
           </div>
         </div>
@@ -192,7 +192,7 @@
           <p>30.00€</p>
           <img src="../../image/portal.jpg" alt="Nova" width="100px">
           <div class="bouton">
-            <button>Obtenir</button>
+            <button>Ajouter au panier</button>
             <button>Plus d'info</button>         
           </div>
         </div> 
@@ -200,7 +200,7 @@
           <p>GRATUIT</p>
           <img src="../../image/Apex.jpg" alt="Nova" width="100px">
           <div class="bouton">
-            <button>Obtenir</button>
+            <button>Ajouter au panier</button>
             <button>Plus d'info</button>         
           </div>
         </div>
@@ -208,7 +208,7 @@
           <p>GRATUIT</p>
           <img src="../../image/Overwatch2.png" alt="Nova" width="100px">
           <div class="bouton">
-            <button>Obtenir</button>
+            <button>Ajouter au panier</button>
             <button>Plus d'info</button>         
           </div>
         </div>
@@ -216,7 +216,7 @@
           <p>30.00€</p>
           <img src="../../image/PvZ Garden War.avif" alt="Nova" width="100px">
           <div class="bouton">
-            <button>Obtenir</button>
+            <button>Ajouter au panier</button>
             <button>Plus d'info</button>         
           </div>
         </div>
@@ -224,7 +224,7 @@
           <p>30.00€</p>
           <img src="../../image/The-Last-of-Us-Part-1.jpg" alt="Nova" width="100px">
           <div class="bouton">
-            <button>Obtenir</button>
+            <button>Ajouter au panier</button>
             <button>Plus d'info</button>         
           </div>
         </div>
@@ -232,7 +232,7 @@
           <p>30.00€</p>
           <img src="../../image/Tombe Raider Shadow.jpg" alt="Nova" width="100px">
           <div class="bouton">
-            <button>Obtenir</button>
+            <button>Ajouter au panier</button>
             <button>Plus d'info</button>         
           </div>
         </div>
@@ -240,7 +240,7 @@
           <p>30.00€</p>
           <img src="../../image/Red dead.jpg" alt="Nova" width="100px">
           <div class="bouton">
-            <button>Obtenir</button>
+            <button>Ajouter au panier</button>
             <button>Plus d'info</button>         
           </div>
         </div>

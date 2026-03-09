@@ -118,8 +118,9 @@
     }
     div.titre h1 {
         color: white;
+        margin: 0;
     }
-    div.text h2, div.titre h1 {
+    div.text h2{
         margin: 0;
     }
     div.bouton {
@@ -176,9 +177,9 @@
                 <p>Satisfactory est un jeu vidéo de simulation et de construction en vue à la première personne dans un monde ouvert.</p>
             </div>
             <div class="bouton">
-                <button>Obtenir</button>
+                <button>Ajouter au panier</button>
                 <button>Plus d'info</button>
-                <p><s>40.00€</s> -> 32.00€</p>
+                <p><s>40.00€</s> ➡️ 32.00€</p>
             </div>
         </div>
         <img src="../../image/Satis.jpg">
@@ -190,9 +191,9 @@
                 <p>Satisfactory est un jeu vidéo de simulation et de construction en vue à la première personne dans un monde ouvert.</p>
             </div>
             <div class="bouton">
-                <button>Obtenir</button>
+                <button>Ajouter au panier</button>
                 <button>Plus d'info</button>
-                <p><s>10.00€</s> -> 8.00€</p>
+                <p><s>10.00€</s> ➡️ 8.00€</p>
             </div>
         </div>
         <img src="../../image/Satis.jpg">
@@ -204,9 +205,9 @@
                 <p>Minecraft est un jeu vidéo de type aventure « bac à sable » développé par le Suédois Markus Persson, alias Notch, puis par la société Mojang Studios.</p>
             </div>
             <div class="bouton">
-                <button>Obtenir</button>
+                <button>Ajouter au panier</button>
                 <button>Plus d'info</button>
-                <p><s>40.00€</s> -> 26.00€</p>
+                <p><s>40.00€</s> ➡️ 26.00€</p>
             </div>
         </div>
         <img src="../../image/minecraft.jpg">
