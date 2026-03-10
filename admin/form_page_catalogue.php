@@ -12,7 +12,7 @@
     $game_image ="";
 
     if ($game_id > 0){
-        $sql="SELECT * FROM table_solde WHERE game_id=:id";
+        $sql="SELECT * FROM table_game WHERE game_id=:id";
         $stmt=$db->prepare($sql);
         $stmt->execute([":id" =>$_GET["id"]]);
 
@@ -120,7 +120,7 @@
 
         <div class="form-group">
             <label for="game_image ">Image</label>
-            <input type="text" class="form-control" name="game_image" id="game_image" value="<?=hsc($game_image );?>">
+            <input type="text" class="form-control" name="game_image" id="game_image" value="<?=hsc($game_image);?>">
         </div> 
 
         <input type="hidden" name="game_id" value="<?=hsc($game_id);?>">

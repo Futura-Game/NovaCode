@@ -1,3 +1,31 @@
+<?php 
+    require_once($_SERVER['DOCUMENT_ROOT'] . '/novacode/C/config.php');
+    require_once($_SERVER['DOCUMENT_ROOT'] . '/novacode/C/connect.php');
+
+$limit= 8;
+$page= 1;
+if (!empty($_GET['page'])&& $_GET['page']>1){
+    $page = $_GET['page'];
+}
+$offset= ($page-1)*$limit;
+
+$total=0;
+$sql="SELECT COUNT(crédit_id) AS total FROM table_crédit";
+$stmt=$db->prepare($sql);
+$stmt->execute();
+if ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+    $total = $row["total"];
+}
+$maxPage= ceil($total/$limit);
+
+$sql="SELECT * FROM table_crédit ORDER BY crédit_id ASC LIMIT :offset , :limit";
+$stmt=$db->prepare($sql);
+$stmt->bindValue(":offset", $offset, PDO::PARAM_INT);
+$stmt->bindValue(":limit", $limit, PDO::PARAM_INT);
+$stmt->execute();
+$recordset = $stmt ->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -95,6 +123,26 @@
       text-underline-offset: 6px;
     }
 
+    nav.page ul {
+        justify-content: center;
+        background-color: black;
+        list-style: none;
+        display: flex;
+        gap: 18px;
+        margin: 0;
+        padding: 5px;
+    }
+
+    nav.page a {
+        color: rgb(121, 121, 121);
+        text-decoration: none;
+        font-size: 25px;
+    }
+
+    nav.page a:hover {
+        color: white;
+    }
+
     div.titre {
         background: url(../../image/Maquette-pour-Solde.png);
         background-size: cover;
@@ -130,7 +178,7 @@
         .select-categorie button {
             margin: 0;
         }
-        .Choix-1, .Choix-2, .Choix-3, .Choix-4, .Choix-5, .Choix-6, .Choix-7, .Choix-8 {
+        .Choix {
             border: solid 2px white;
             border-radius: 20px;
             height: 260px;
@@ -179,70 +227,34 @@
     <div class="titre">
         <h1>Nos cartes virtuels disponible :</h1>
     </div>
+    
     <div class="select-categorie">
-        <div class="Choix-1" id="divCatégorie1">
-          <p>10.00€</p>
-          <img src="../../image/CarteRobux10.jpg" alt="Nova" width="100px">
+      <?php foreach ($recordset as $row){?>
+        <div class="Choix">
+          <p><?= htmlspecialchars($row['crédit_prix']);?>€</p>
+          <img src="<?= htmlspecialchars($row['crédit_image']);?>" alt="Nova" width="100px">
           <div class="bouton">
             <button>Ajouter au panier</button>
             <button>Plus d'info</button>         
           </div>
         </div>
-        <div class="Choix-2" id="divCatégorie2">
-          <p>25.00€</p>
-          <img src="../../image/CarteRobux25.jpg" alt="Nova" width="100px">
-          <div class="bouton">
-            <button>Ajouter au panier</button>
-            <button>Plus d'info</button>         
-          </div>
-        </div> 
-        <div class="Choix-3" id="divCatégorie3">
-          <p>50.00€</p>
-          <img src="../../image/CarteRobux50.jpg" alt="Nova" width="100px">
-          <div class="bouton">
-            <button>Ajouter au panier</button>
-            <button>Plus d'info</button>         
-          </div>
-        </div>
-        <div class="Choix-4" id="divCatégorie4">
-          <p>100.00€</p>
-          <img src="../../image/CarteRobux100.jpg" alt="Nova" width="100px">
-          <div class="bouton">
-            <button>Ajouter au panier</button>
-            <button>Plus d'info</button>         
-          </div>
-        </div>
-        <div class="Choix-5" id="divCatégorie5">
-          <p>10.00€</p>
-          <img src="../../image/CarteVBuck10.jpg" alt="Nova" width="100px">
-          <div class="bouton">
-            <button>Ajouter au panier</button>
-            <button>Plus d'info</button>         
-          </div>
-        </div>
-        <div class="Choix-6" id="divCatégorie6">
-          <p>20.00€</p>
-          <img src="../../image/CarteVBuck20.jpg" alt="Nova" width="100px">
-          <div class="bouton">
-            <button>Ajouter au panier</button>
-            <button>Plus d'info</button>         
-          </div>
-        </div>
-        <div class="Choix-7" id="divCatégorie7">
-          <p>35.00€</p>
-          <img src="../../image/CarteVBuck35.jpg" alt="Nova" width="100px">
-          <div class="bouton">
-            <button>Ajouter au panier</button>
-            <button>Plus d'info</button>         
-          </div>
-        </div>
-        <div class="Choix-8" id="divCatégorie8">
-          <p>80.00€</p>
-          <img src="../../image/CarteVBuck80.jpg" alt="Nova" width="100px">
-          <div class="bouton">
-            <button>Ajouter au panier</button>
-            <button>Plus d'info</button>         
-          </div>
-        </div>
+        <?php }?>
     </div>
-  </main../../image/
+    </div>
+
+        <?php $maxPage=2;?>
+
+        <nav class="page">
+        <ul>
+            <li><a class="Bouton" href="?page=1">&lt;&lt;</a></li>
+            <li><a class="Bouton" href="?page=<?=$page>1?$page-1:1;?>">&lt;</a></li>
+            <?php for ($i=1;$i<=$maxPage;$i++){ ?>
+                <li><a class="Bouton" href="?page=<?=$i;?>"><?=$i;?></a></li>
+            <?php } ?>            
+            <li><a class="Bouton" href="?page=<?=$page<$maxPage?$page+1:$maxPage;?>">&gt;</a></li>
+            <li><a class="Bouton" href="?page=<?=$maxPage;?>">&gt;&gt;</a></li>
+        </ul>
+        </nav>
+  </main>
+</body>
+</html>

@@ -1,3 +1,31 @@
+<?php 
+    require_once($_SERVER['DOCUMENT_ROOT'] . '/novacode/C/config.php');
+    require_once($_SERVER['DOCUMENT_ROOT'] . '/novacode/C/connect.php');
+
+$limit= 4;
+$page= 1;
+if (!empty($_GET['page'])&& $_GET['page']>1){
+    $page = $_GET['page'];
+}
+$offset= ($page-1)*$limit;
+
+$total=0;
+$sql="SELECT COUNT(solde_id) AS total FROM table_solde";
+$stmt=$db->prepare($sql);
+$stmt->execute();
+if ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+    $total = $row["total"];
+}
+$maxPage= ceil($total/$limit);
+
+$sql="SELECT * FROM table_solde ORDER BY solde_id ASC LIMIT :offset , :limit";
+$stmt=$db->prepare($sql);
+$stmt->bindValue(":offset", $offset, PDO::PARAM_INT);
+$stmt->bindValue(":limit", $limit, PDO::PARAM_INT);
+$stmt->execute();
+$recordset = $stmt ->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -94,6 +122,27 @@
         text-decoration: underline;
         text-underline-offset: 6px;
     }
+
+    nav.page ul {
+        justify-content: center;
+        background-color: black;
+        list-style: none;
+        display: flex;
+        gap: 18px;
+        margin: 0;
+        padding: 5px;
+    }
+
+    nav.page a {
+        color: rgb(121, 121, 121);
+        text-decoration: none;
+        font-size: 25px;
+    }
+
+    nav.page a:hover {
+        color: white;
+    }
+
     div.groupe {
         background-color: rgba(0, 0, 0, 0.75);
         display: flex;
@@ -170,48 +219,38 @@
     <div class="titre">
         <h1>Nos meilleurs soldes :</h1>
     </div>
+    <?php foreach ($recordset as $row){?>
     <div class="groupe">
         <div class="text+bouton">
+            
             <div class="text">
-                <h2>(-20%) Satisfactory</h2>
-                <p>Satisfactory est un jeu vidéo de simulation et de construction en vue à la première personne dans un monde ouvert.</p>
+                <h2>(-<?= htmlspecialchars($row['solde_nombre']);?>%) <?= htmlspecialchars($row['solde_name']);?></h2>
+                <p><?= htmlspecialchars($row['solde_description']);?></p>
             </div>
             <div class="bouton">
                 <button>Ajouter au panier</button>
                 <button>Plus d'info</button>
-                <p><s>40.00€</s> ➡️ 32.00€</p>
+                <p><s><?= htmlspecialchars($row['solde_prix_base']);?>€</s> ➡️ <?= htmlspecialchars($row['solde_prix_calculer']);?></p>
             </div>
         </div>
-        <img src="../../image/Satis.jpg">
+        <img src="<?= htmlspecialchars($row['solde_image']);?>">
     </div>
-    <div class="groupe">
-        <div class="text+bouton">
-            <div class="text">
-                <h2>(-20%) Satisfactory DLC</h2>
-                <p>Satisfactory est un jeu vidéo de simulation et de construction en vue à la première personne dans un monde ouvert.</p>
-            </div>
-            <div class="bouton">
-                <button>Ajouter au panier</button>
-                <button>Plus d'info</button>
-                <p><s>10.00€</s> ➡️ 8.00€</p>
-            </div>
-        </div>
-        <img src="../../image/Satis.jpg">
-    </div>
-    <div class="groupe">
-        <div class="text+bouton">
-            <div class="text">
-                <h2>(-35%) Minecraft</h2>
-                <p>Minecraft est un jeu vidéo de type aventure « bac à sable » développé par le Suédois Markus Persson, alias Notch, puis par la société Mojang Studios.</p>
-            </div>
-            <div class="bouton">
-                <button>Ajouter au panier</button>
-                <button>Plus d'info</button>
-                <p><s>40.00€</s> ➡️ 26.00€</p>
-            </div>
-        </div>
-        <img src="../../image/minecraft.jpg">
-    </div>
+    <?php }?>
+
+
+        <?php $maxPage=4;?>
+
+        <nav class="page">
+        <ul>
+            <li><a class="Bouton" href="?page=1">&lt;&lt;</a></li>
+            <li><a class="Bouton" href="?page=<?=$page>1?$page-1:1;?>">&lt;</a></li>
+            <?php for ($i=1;$i<=$maxPage;$i++){ ?>
+                <li><a class="Bouton" href="?page=<?=$i;?>"><?=$i;?></a></li>
+            <?php } ?>            
+            <li><a class="Bouton" href="?page=<?=$page<$maxPage?$page+1:$maxPage;?>">&gt;</a></li>
+            <li><a class="Bouton" href="?page=<?=$maxPage;?>">&gt;&gt;</a></li>
+        </ul>
+        </nav>
   </main>
 </body>
 </html>

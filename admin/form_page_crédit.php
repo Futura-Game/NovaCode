@@ -12,7 +12,7 @@
     $crédit_image ="";
 
     if ($crédit_id > 0){
-        $sql="SELECT * FROM table_solde WHERE crédit_id=:id";
+        $sql="SELECT * FROM table_crédit WHERE crédit_id=:id";
         $stmt=$db->prepare($sql);
         $stmt->execute([":id" =>$_GET["id"]]);
 
