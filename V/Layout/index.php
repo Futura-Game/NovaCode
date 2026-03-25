@@ -206,10 +206,11 @@ $recordset = $stmt ->fetchAll(PDO::FETCH_ASSOC);
 
       <nav>
         <ul>
-          <li><a class="active" href="./index.php">Accueil</a></li>
-          <li><a href="./catalogue.php">Catalogue</a></li>
-          <li><a href="./crédit.php">Crédit</a></li>
-          <li><a href="./carte.php">Carte</a></li>
+        <li><a class="active" href="./index.php">Accueil</a></li>
+        <li><a href="./catalogue.php">Catalogue</a></li>
+        <li><a href="./crédit.php">Crédit</a></li>
+        <li><a href="./carte.php">Carte</a></li>
+        <li><a href="./logout-user.php">Déconnexion</a></li>
         </ul>
       </nav>
 

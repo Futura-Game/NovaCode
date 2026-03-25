@@ -13,6 +13,7 @@
             if (password_verify($_POST['pwd'], $row['user_password'])){
                 session_start();
                 $_SESSION["user_connected"] = "Bienvenue";
+                $_SESSION['user_id'] = $row['user_id'];
 
                 header("Location:index.php");
                 exit();
@@ -26,7 +27,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire Admin</title>
+    <title>Formulaire Connextion</title>
     <style>
 
     h1, p {
@@ -36,7 +37,7 @@
 
     body {
     font-family: Arial, sans-serif;
-    background: url(../image/Space.jpeg);
+    background: url(../../image/Space.jpeg);
     background-size: cover;      /* Remplit tout le bloc */
     background-repeat: no-repeat;
     padding: 20px;
@@ -105,7 +106,7 @@
     </haeder>
 
     <main>
-    <p>BIENVENUE User, veiller vous identifier</p>
+    <p>BIENVENUE User, veuillez vous identifier</p>
 
     <form action="" method="post">
         

@@ -218,6 +218,7 @@ $recordset = $stmt ->fetchAll(PDO::FETCH_ASSOC);
           <li><a href="./catalogue.php">Catalogue</a></li>
           <li><a class="active" href="./crédit.php">Crédit</a></li>
           <li><a href="./carte.php">Carte</a></li>
+          <li><a href="./logout-user.php">Déconnexion</a></li>
         </ul>
       </nav>
 

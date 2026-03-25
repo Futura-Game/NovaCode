@@ -161,6 +161,7 @@
           <li><a href="./catalogue.php">Catalogue</a></li>
           <li><a href="./crédit.php">Crédit</a></li>
           <li><a class="active" href="./carte.php">Carte</a></li>
+          <li><a href="./logout-user.php">Déconnexion</a></li>
         </ul>
       </nav>
 
