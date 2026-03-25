@@ -1,6 +1,7 @@
 <?php 
     require_once($_SERVER['DOCUMENT_ROOT'] . '/novacode/C/config.php');
     require_once($_SERVER['DOCUMENT_ROOT'] . '/novacode/C/connect.php');
+    require_once($_SERVER['DOCUMENT_ROOT'] . '/novacode/admin/protect-user.php');
 
 $limit= 8;
 $page= 1;
@@ -37,7 +38,7 @@ $recordset = $stmt ->fetchAll(PDO::FETCH_ASSOC);
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url(../../image/Space.jpg);
+      background: url(../../image/Space.jpeg);
       background-size: cover;
       background-repeat: no-repeat;
     }

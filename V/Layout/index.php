@@ -1,6 +1,7 @@
 <?php 
     require_once($_SERVER['DOCUMENT_ROOT'] . '/novacode/C/config.php');
     require_once($_SERVER['DOCUMENT_ROOT'] . '/novacode/C/connect.php');
+    require_once($_SERVER['DOCUMENT_ROOT'] . '/novacode/admin/protect-user.php');
 
 $limit= 4;
 $page= 1;
@@ -37,7 +38,7 @@ $recordset = $stmt ->fetchAll(PDO::FETCH_ASSOC);
     body {
         margin: 0;
         font-family: Arial, sans-serif;
-        background: url(../../image/Space.jpg);
+        background: url(../../image/Space.jpeg);
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -230,7 +231,7 @@ $recordset = $stmt ->fetchAll(PDO::FETCH_ASSOC);
             <div class="bouton">
                 <button>Ajouter au panier</button>
                 <button>Plus d'info</button>
-                <p><s><?= htmlspecialchars($row['solde_prix_base']);?>€</s> ➡️ <?= htmlspecialchars($row['solde_prix_calculer']);?></p>
+                <p><s><?= htmlspecialchars($row['solde_prix_base']);?> €</s> ➡️ <?= htmlspecialchars($row['solde_prix_calculer']);?> €</p>
             </div>
         </div>
         <img src="<?= htmlspecialchars($row['solde_image']);?>">

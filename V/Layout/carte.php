@@ -1,3 +1,7 @@
+<?php
+    require_once($_SERVER['DOCUMENT_ROOT'] . '/novacode/admin/protect-user.php');
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,7 +13,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url(../../image/Space.jpg);
+      background: url(../../image/Space.jpeg);
       background-size: cover;
       background-repeat: no-repeat;
     }

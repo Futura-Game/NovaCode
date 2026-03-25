@@ -1,6 +1,7 @@
 <?php 
     require_once($_SERVER['DOCUMENT_ROOT'] . '/novacode/C/config.php');
     require_once($_SERVER['DOCUMENT_ROOT'] . '/novacode/C/connect.php');
+    require_once($_SERVER['DOCUMENT_ROOT'] . '/novacode/admin/protect.php');
 
 $limit= 20;
 $page= 1;
